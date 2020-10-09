@@ -1,6 +1,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ 
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -62,19 +62,80 @@ p {
  /* Header */
 
  #logo {
- 	float: left;
- 	margin-right: 10px;
+ 	display:none;
+}
+
+#social-icons > li {
+  display: inline-block;
+}
+
+#mobile-title {
+	display:none;
+}
+
+#top-bar {
+	background-color: #9DD8F7;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #131212;
+}
+
+.navbar-inverse {
+	border-color:#9DD8F7;
+}
+
+.navbar-brand {
+	padding: inherit;
+
+}
+
+.brand-nav {
+	margin: 0px 0px 10px 23px;
+}
+
+#brand-title {
+	margin:0px 0px;
  	font-size: 1.7em;
- 	color: #fff;
+ 	margin-right: 2px;
+ 	color: #131212;
  	text-transform: uppercase;
  	letter-spacing: -1px;
  	padding-top: 9px;
  	font-weight: bold;
 
 	 &:hover {
-	 	color: #fff;
+	 	color: #9DD8F7;
 	 	text-decoration: none;
-	 }
+	}
+
+}
+
+#brand-vision-mobile {
+	display: none;
+}
+
+#contacts-nav > li {
+	margin-right: 19px;
+}
+
+.contacts-link {
+	text-decoration: none;
+}
+
+.contacts-link:hover {
+	text-decoration: none;
+}
+
+.give-button {
+	border-radius: 30px;
+	padding: 15px 72px;
+}
+
+.c-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 
@@ -194,7 +255,8 @@ input {
 	margin-left: 0;
 }
 
-@media (max-width: 800px) {
+@media only screen 
+and (max-device-width: 812px) {
 	footer {
 		small {
 			display: block;
@@ -210,4 +272,79 @@ input {
 			}
 		}
 	}
+
+	#social-icons {
+		display:flex;
+		justify-content:center;
+	}
+
+	#logo {
+		display: block;
+	 	float: left;
+	 	font-size: 1.4em;
+	 	margin-right: 2px;
+	 	color: #131212;
+	 	text-transform: uppercase;
+	 	letter-spacing: -1px;
+	 	padding-top: 9px;
+	 	font-weight: bold;
+
+		 &:hover {
+		 	color: #fff;
+		 	text-decoration: none;
+		 }
+	}
+
+	#name-toggle{
+		display: flex;
+		justify-content: center;
+	}
+
+	.navbar .navbar-collapse {
+		text-align: center;
+	}
+
+	body {
+		padding-top: 0px;
+	}
+
+	.navbar-fixed-top {
+		position: relative;
+	}
+
+	#brand-title {
+		display:none;
+	}
+
+	.brand-nav{
+		display: flex;
+		justify-content: center;
+		margin-left:0px;
+	}
+	#brand-vision {
+		display: none;
+	}
+
+	#brand-vision-mobile {
+		display: flex;
+	}
+
+	#contacts-nav {
+		text-align: center;
+	}
+
+	#contacts-nav > li {
+		margin-right:0px;
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+	  #logo {
+	  	display:none;
+	  }
+
 }

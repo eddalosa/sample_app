@@ -1,12 +1,74 @@
-<div class="center jumbotron">
-<h1>Welcome to the Sample App</h1>
-<h2>
-	This is the home page for the
-	<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-	sample application.
-</h2>
+	<div class="row">
+		<div class="col-md-6">
+			<nav id="brand-bar" class="navbar navbar-light bg-light brand-nav">
+			  <a class="navbar-brand" href="#">
+			    <img src="../../assets/youtube-logo-pefa-kayole-b.png" width="60" height="60" alt="">
+			  </a>
+			  <p id="brand-title">PEFA CHURCH KAYOLE B</p>
+			  <p id ="brand-vision" class="brand-nav" style="margin-left:23px;">Making Disciples of all nations</p>
+			</nav>
+			<p id ="brand-vision-mobile" class="brand-nav">Making Disciples of all nations</p>
+		</div>
 
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
+		<div class="col-md-6">
+			<ul id="contacts-nav" class="nav navbar-nav navbar-left">
+				<li>
+			  		<p><i class="far fa-envelope fa-3x"></i>
+					</p>
+			  	</li>
+			  	<li> 
+			  		<p>Email Us At</p>
+			  		<p><a class="contacts-link"href = "mailto: youthpkb@gmail.com">youthpkb@gmail.com</a></p>
+			  	</li>
+		  		<li>
+		  	  		<p><i class="fas fa-phone-alt fa-3x"></i>
+		  	  	</li>
+		  	  	<li> 
+		  	  		<p>Call Us Now!</p>
+		  	  		<p><a class="contacts-link" href = "tel: 0723******">0723******</a></p>
+		  	  	</li>
+	  	  		<li>
+	  	  	  		<p><a href="#" class="btn btn-info btn-lg disabled give-button" tabindex="-1" role="button" aria-disabled="true">Give</a></p>
+	  	  	  	</li>
+			</li>
+		</div>
+	</div>
 
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="d-block w-100 c-image" src="../../assets/pic5.JPG" alt="First slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100 c-image" src="../../assets/pic2.JPG" alt="Second slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100 c-image" src="../../assets/pic3.JPG" alt="Third slide">
+		    </div>
+
+		    <div class="carousel-item">
+		      <img class="d-block w-100 c-image" src="../../assets/pic4.JPG" alt="Third slide">
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+
+	<div class="center jumbotron">
+	<h1>Welcome to the Sample App</h1>
+	<h2>
+		This is the home page for the
+		<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+		sample application.
+	</h2>
+
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+	</div>
+
+	<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
