@@ -1,5 +1,4 @@
- @import "bootstrap-sprockets";
- @import "bootstrap";
+  @import "bootstrap";
  
 /* mixins, variables, etc. */
 
@@ -92,6 +91,7 @@ p {
 
 .brand-nav {
 	margin: 0px 0px 10px 23px;
+	width: 100%;
 }
 
 #brand-title {
@@ -346,5 +346,49 @@ and (max-device-width: 812px) {
 	  #logo {
 	  	display:none;
 	  }
+
+	  #brand-title {
+	  	display: block;
+	  }
+
+	  #brand-vision-mobile {
+	  	display: none;
+	  }
+
+	  #contacts-nav {
+	  	display: flex;
+  	    justify-content: center;
+  	    margin: 0px;
+  	    width: 100%;
+	  }
+
+	  #contacts-nav > li {
+	  	margin-right: 19px;
+	  }
+
+	  #contacts-nav > li > p {
+	  	font-size: 1.1em;
+	  }
+
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  	#contacts-nav > li {
+  		margin-right: 7px;
+  	}
+
+  	#contacts-nav > li > p {
+  		font-size: 1.0em;
+  	}
+
+  	.give-button {
+  		padding: 12px 48px;
+  	}
 
 }
