@@ -112,6 +112,20 @@ p {
 }
 
 .core-title {
+ 	font-size: 2.1em;
+ 	color: #131212;
+ 	text-transform: uppercase;
+ 	letter-spacing: -1px;
+ 	padding-top: 9px;
+ 	font-weight: bold;
+
+	 &:hover {
+	 	color: #9DD8F7;
+	 	text-decoration: none;
+	}
+}
+
+.core-content {
 	margin:0px 0px;
  	font-size: 1.1em;
  	margin-right: 2px;
@@ -341,7 +355,11 @@ and (max-device-width: 812px) {
 	}
 
 	.navbar-fixed-top {
-		position: relative;
+		position: fixed;
+	}
+
+	.contacts-bar {
+		margin-top: 120px;
 	}
 
 	#brand-title {
@@ -367,6 +385,10 @@ and (max-device-width: 812px) {
 
 	#contacts-nav > li {
 		margin-right:0px;
+	}
+
+	.core-image {
+	 height:100%
 	}
 }
 
