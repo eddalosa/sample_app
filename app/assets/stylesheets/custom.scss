@@ -111,6 +111,22 @@ p {
 
 }
 
+.core-title {
+	margin:0px 0px;
+ 	font-size: 1.1em;
+ 	margin-right: 2px;
+ 	color: #131212;
+ 	text-transform: uppercase;
+ 	letter-spacing: -1px;
+ 	padding-top: 9px;
+ 	font-weight: bold;
+
+	 &:hover {
+	 	color: #9DD8F7;
+	 	text-decoration: none;
+	}
+}
+
 #brand-vision-mobile {
 	display: none;
 }
@@ -136,6 +152,22 @@ p {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.mission-vision {
+	margin-top: 30px;
+}
+
+.core-image {
+	width: 100%;
+	height:530px;
+	object-fit:cover
+
+}
+
+.core-list {
+	list-style-type:none;
+	display: inline;
 }
 
 
