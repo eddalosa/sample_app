@@ -65,11 +65,15 @@
 
 			<div class="content-def">
 				<h4 class="core-content">Purpose</h4>
-				<P>To bring People to Christ and to the membership of His family, disciples and equip them for the work of the ministry. (Ephesians 4:12)</P>
+				<P>To bring People to Christ and to the membership of His family, disciples and equip them for the work of the ministry. (Ephesians 4:12)
+				<span id="dots">...</span></P>
+				<div id="more">
+					<P>To add value in people's lives through teaching biblical principles and being a role model</P>
 
-				<P>To add value in people's lives through teaching biblical principles and being a role model</P>
+					<P>To develop a Kingdom community that impacts other communities. Example Academic Community, Business community etc.</P>
+				</div>
 
-				<P>To develop a Kingdom community that impacts other communities. Example Academic Community, Business community etc.</P>
+				<button onclick="myFunction()" id="myBtn">Readmore</button>
 			</div>
 		</div>
 	</div>
@@ -80,53 +84,76 @@
 		<h4 class="text-center core-title">OUR CORE VALUES</h4>
 			<div class="row">
 				<div class="col-md-4">
-						<p class="core-content">
-							<span><i class="fas fa-cross fa-2x"></i></span>
-	  						We are a Family
-						</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<div class="card">
+							<%= image_tag("family.jpg", class: "card-img-top d-block w-100 c-image") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">We Are a Family</h3>
+						    
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 
 				<div class="col-md-4">
-						<p class="core-content">
-							<i class="fas fa-thumbs-up fa-2x"></i>
-	  						Excellence in Service
-						</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<div class="card">
+							<%= image_tag("excellent_service.jpg", class: "card-img-top d-block w-100 c-image") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">Excellence in Service</h3>
+						    
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 
 				<div class="col-md-4">
-					<p class="core-content">
-						<i class="fas fa-bible fa-2x"></i>
-  						Sound Biblical Teachings
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+					<div class="card">
+							<%= image_tag("biblical-techings.jpg", class: "card-img-top d-block w-100 c-image") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">Sound Biblical Teachings</h3>
+						    
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-4">
-						<p class="core-content">
-							<i class="fas fa-graduation-cap fa-2x"></i>
-	  						Learning
-						</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<div class="card">
+							<%= image_tag("education.jpg", class: "card-img-top d-block w-100 c-image") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">Learning</h3>
+						   
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 
 				<div class="col-md-4">
-					<p class="core-content">
-						<i class="fas fa-praying-hands fa-2x"></i>
-  						God Centered Worship
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+					<div class="card">
+							<%= image_tag("god_centered.jpg", class: "card-img-top d-block w-100 c-image") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">God Centered Worship</h3>
+						    
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 
 				<div class="col-md-4">
-						<p class="core-content">
-							<i class="fas fa-child fa-2x"></i>
-	  						Children Ministry
-						</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<div class="card ">
+							<%= image_tag("children_mini.jpg", class: "card-img-top d-block w-100 c-image rounded border border-primary") %>
+						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
+						  <div class="card-body text-center">
+						    <h3 class="card-title text-center">Children Ministry</h3>
+						    <a href="#" class="btn btn-primary">Read More</a>
+						  </div>
+						</div>
 				</div>
 			</div>
 	</div>
@@ -136,7 +163,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title" id="exampleModalLabel">Giving: Tithes, Offerings, Projects</h1>
+        <h2 class="modal-title text-center" id="exampleModalLabel">Giving: Tithes, Offerings, Projects</h2>
         <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
