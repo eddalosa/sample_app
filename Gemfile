@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',      '6.0.2.1'
@@ -11,6 +12,10 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.5', require: false
 gem 'mini_racer'
+gem 'mini_magick'
+gem 'image_processing'
+gem 'cancancan'
+
 
 
 

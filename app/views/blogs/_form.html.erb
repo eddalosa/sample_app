@@ -1,0 +1,29 @@
+<%# app/views/posts/_form.html.erb %>
+<%= form_with(model: blog, local: true) do |form| %>
+<% if blog.errors.any? %>
+  <div id="error_explanation">
+  	<div class="alert alert-danger">
+  		Your blog contains <%= pluralize(blog.errors.count, "error") %>.
+  	</div>
+  	<ul>
+  		<% blog.errors.full_messages.each do |msg| %>
+  		  <li><%= msg %></li>
+  		<%end%>
+  	</ul>
+  	<p>Please rectify the errors to proceed.</p>
+  </div>
+  <% end %>
+  <div class="field">
+  	<%= form.label :title %><br>
+  	<%= form.text_field :title %><br>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </div>
+
+  <div>
+  <%= form.label :status %><br>
+  <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+</div>
+
+  <%= form.submit %>
+<% end %>
