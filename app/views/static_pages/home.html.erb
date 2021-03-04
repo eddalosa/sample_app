@@ -162,9 +162,13 @@
 
 <div class="blog-sect text-center">
 	<h4 class="core-title">WORD FROM THE PASTORS DESK</h4>
-	<h4><%= blog_title(0) %></h4>
-	<p><%= blog_text_teaser(0)%></p>
-	<%= link_to "Read more", blog_path(blog_helper(0)), class: "btn btn-info" %>
+	<%if @blogs %>
+		<h4><%= blog_title(0) %></h4>
+		<p><%= blog_text_teaser(0)%></p>
+		<%= link_to "Read more", blog_path(blog_helper(0)), class: "btn btn-info" %>
+	<% else %>
+		<p>We writing something good for you.</p>
+	<% end %>
 </div>
 <div class="modal fade" id="giveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
