@@ -161,8 +161,8 @@
 <hr style="border:1px solid #9DD8F7;">
 
 <div class="blog-sect text-center">
-	<h4 class="core-title">WORD FROM THE PASTORS DESK</h4>
-	<%if @blogs %>
+	<h4 class="core-title">WORD FROM THE PASTOR'S DESK</h4>
+	<%if !@blogs.empty? %>
 		<h4><%= blog_title(0) %></h4>
 		<p><%= blog_text_teaser(0)%></p>
 		<%= link_to "Read more", blog_path(blog_helper(0)), class: "btn btn-info" %>
