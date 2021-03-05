@@ -12,7 +12,7 @@
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><iframe src='https://www.youtube.com/embed/<%= video.url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe></td>
+        <td><iframe src='https://www.youtube.com/embed/<%= video.url.split('/').last %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe></td>
         <% if session[:user_id] %>
           <td><%= link_to 'Show', video %></td>
           <td><%= link_to 'Edit', edit_video_path(video) %></td>

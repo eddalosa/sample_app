@@ -73,7 +73,7 @@
 					<P>To develop a Kingdom community that impacts other communities. Example Academic Community, Business community etc.</P>
 				</div>
 
-				<button onclick="myFunction()" id="myBtn">Readmore</button>
+				<button class="btn btn-info" onclick="myFunction()" id="myBtn">Readmore</button>
 			</div>
 		</div>
 	</div>
@@ -82,76 +82,76 @@
 <div class="row mission-vision">
 	<div class="container-fluid">
 		<h4 class="text-center core-title">OUR CORE VALUES</h4>
-			<div class="row">
-				<div class="col-md-4">
+			<div class="values-row row">
+				<div class="value-card col-md-4">
 						<div class="card">
 							<%= image_tag("family.jpg", class: "card-img-top d-block w-100 c-image") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">We Are a Family</h3>
-						    
-						    <a href="#" class="btn btn-primary">Read More</a>
+
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="value-card col-md-4">
 						<div class="card">
 							<%= image_tag("excellent_service.jpg", class: "card-img-top d-block w-100 c-image") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">Excellence in Service</h3>
 						    
-						    <a href="#" class="btn btn-primary">Read More</a>
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="value-card col-md-4">
 					<div class="card">
 							<%= image_tag("biblical-techings.jpg", class: "card-img-top d-block w-100 c-image") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">Sound Biblical Teachings</h3>
 						    
-						    <a href="#" class="btn btn-primary">Read More</a>
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-4">
+			<div class="values-row row">
+				<div class="value-card col-md-4">
 						<div class="card">
 							<%= image_tag("education.jpg", class: "card-img-top d-block w-100 c-image") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">Learning</h3>
 						   
-						    <a href="#" class="btn btn-primary">Read More</a>
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="value-card col-md-4">
 					<div class="card">
 							<%= image_tag("god_centered.jpg", class: "card-img-top d-block w-100 c-image") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">God Centered Worship</h3>
 						    
-						    <a href="#" class="btn btn-primary">Read More</a>
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="value-card col-md-4">
 						<div class="card ">
 							<%= image_tag("children_mini.jpg", class: "card-img-top d-block w-100 c-image rounded border border-primary") %>
 						 <!--  <img class="card-img-top" src="..." alt="Card image cap"> -->
 						  <div class="card-body text-center">
 						    <h3 class="card-title text-center">Children Ministry</h3>
-						    <a href="#" class="btn btn-primary">Read More</a>
+						    <%= link_to 'Read More', about_path, class: "btn btn-info" %>
 						  </div>
 						</div>
 				</div>
@@ -174,16 +174,18 @@
 <div class="video-sect text-center">
 	<h4 class="core-title">SERMONS AND SONGS</h4>
 	<%if !@videos.empty? %>
-		<div class="row">
+		<div class="row" style="margin-bottom:10px;">
 			<% @videos.first(3).each do |video| %>
 				<div class="col-md-4">
-					<iframe src='https://www.youtube.com/embed/<%= video.url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+					<iframe src='https://www.youtube.com/embed/<%= video.url.split('/').last %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
 				</div>
 			<% end %>
+		</div>
+			<%= link_to "View More Videos", videos_path, class: "btn btn-info" %>
 	<% else %>
 		<p>We will upload our videos soon.</p>
 	<% end %>
-</div>
+	</div>
 
 <div class="modal fade" id="giveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -201,8 +203,8 @@
 		</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-info">Save changes</button> -->
       </div>
     </div>
   </div>
