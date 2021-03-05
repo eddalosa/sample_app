@@ -19,4 +19,5 @@ module StaticPagesHelper
       truncate(strip_tags(@blog.content.to_s), length: 300, separator: " ")
     end
   end
+
 end

@@ -170,6 +170,21 @@
 		<p>We writing something good for you.</p>
 	<% end %>
 </div>
+<hr style="border:1px solid #9DD8F7;">
+<div class="video-sect text-center">
+	<h4 class="core-title">SERMONS AND SONGS</h4>
+	<%if !@videos.empty? %>
+		<div class="row">
+			<% @videos.first(3).each do |video| %>
+				<div class="col-md-4">
+					<iframe src='https://www.youtube.com/embed/<%= video.url %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+				</div>
+			<% end %>
+	<% else %>
+		<p>We will upload our videos soon.</p>
+	<% end %>
+</div>
+
 <div class="modal fade" id="giveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

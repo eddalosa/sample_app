@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
   	@blogs = Blog.order("created_at DESC")
+  	@videos = Video.order("created_at DESC")
   end
 
   def help
