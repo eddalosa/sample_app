@@ -1,11 +1,11 @@
 <div class="blog-post text-center">
-<h1><%= @blog.title %></h1>
+<h4 class="core-title"><%= @blog.title %></h4>
 <p >
 	<%= @blog.content %>
 	<div class="article-meta-details">
 		<small>Created by: <%= @blog.user.name if @blog.user %>,
-		<%= time_ago_in_words(@blog.created_at) %> ago,
-		last updated: <%= time_ago_in_words(@blog.updated_at) %> ago</small>
+		<%= time_ago_in_words(@blog.created_at) %> ago.
+		<!-- last updated: <%= time_ago_in_words(@blog.updated_at) %> ago --></small>
 	</div>
 </p>
 

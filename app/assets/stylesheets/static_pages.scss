@@ -6,9 +6,12 @@
   box-sizing: border-box;
 }
 
+a:hover, a:focus {
+	text-decoration: none;
+}
+
 .blog-sect {
-	margin:auto;
-	width:85%;
+	margin:0 auto;
 	padding: 10px;
 }
 

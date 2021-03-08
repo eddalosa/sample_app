@@ -1,28 +1,23 @@
 <% provide(:title, "Sermons & Songs") %>
 <p id="notice"><%= notice %></p>
 
-<h1>Sermons and Songs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h4 class="core-title text-center">Sermons and Songs</h4>
+<div class="row text-center" style="margin-bottom:10px;">
     <% @videos.each do |video| %>
-      <tr>
-        <td><iframe src='https://www.youtube.com/embed/<%= video.url.split('/').last %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe></td>
-        <% if session[:user_id] %>
-          <td><%= link_to 'Show', video %></td>
-          <td><%= link_to 'Edit', edit_video_path(video) %></td>
-          <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <div class="col-md-4">
+      <iframe src='https://www.youtube.com/embed/<%= video.url.split('/').last %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+      <% if session[:user_id] %>
+          <table>
+            <tr>
+              <td><%= link_to 'Show', video %></td>
+              <td><%= link_to 'Edit', edit_video_path(video) %></td>
+              <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          </table>
         <% end %>
-      </tr>
+    </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br>
 <% if session[:user_id] %>

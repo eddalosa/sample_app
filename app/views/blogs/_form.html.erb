@@ -1,4 +1,5 @@
 <%# app/views/posts/_form.html.erb %>
+<div class="blog-form">
 <%= form_with(model: blog, local: true) do |form| %>
 <% if blog.errors.any? %>
   <div id="error_explanation">
@@ -25,5 +26,6 @@
   <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
 </div>
 
-  <%= form.submit %>
+  <%= form.submit 'Create Blog', :class => 'btn btn-info'%>
 <% end %>
+</div>
